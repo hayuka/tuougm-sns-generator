@@ -1,0 +1,63 @@
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.create-notice { display: flex; align-items: center; gap: 12px; border: 1px solid #e2dcf5; background: #eeebfa; color: #594580; border-radius: 10px; padding: 14px 18px; margin-bottom: 24px; font-size: 11px; line-height: 1.8; }
+.create-notice > span { font-size: 21px; flex-shrink: 0; }
+.create-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 24px; align-items: start; }
+.create-page .panel-heading { align-items: flex-start; flex-wrap: wrap; }
+.create-fields { border: 0; margin: 28px 0 0; padding: 0; min-width: 0; }
+.platform-picker { border: 0; padding: 0; margin: 0 0 28px; min-width: 0; }
+.platform-picker legend, .create-field > label { font-size: 12px; font-weight: 600; line-height: 1.8; }
+.field-required { font-size: 9px; font-weight: 500; color: #7854b4; background: #f3effb; padding: 2px 5px; margin-left: 5px; border-radius: 4px; }
+.field-optional { font-size: 10px; color: var(--muted); font-weight: 400; margin-left: 5px; }
+.field-help { color: var(--muted); font-size: 10px; line-height: 1.8; margin-top: 8px; overflow-wrap: anywhere; }
+.platform-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 14px; }
+.platform-option { display: flex; align-items: center; gap: 8px; border: 1px solid #dedbe7; border-radius: 9px; padding: 12px 10px; cursor: pointer; font-size: 11px; min-height: 52px; }
+.platform-option:has(input:checked) { background: #f7f3ff; border-color: #a88cde; }
+.platform-option input { accent-color: var(--purple); width: 15px; height: 15px; margin: 0; flex-shrink: 0; }
+.platform-icon { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 7px; font-size: 17px; font-weight: 650; background: #24232d; color: white; flex-shrink: 0; }
+.platform-instagram { background: #a33c87; }
+.platform-facebook { background: #2364c3; }
+.create-field { margin-top: 24px; }
+.create-field > label { display: block; margin-bottom: 10px; }
+.create-field > input, .create-field > textarea { display: block; width: 100%; min-width: 0; max-width: 100%; border: 1px solid #dedbe7; border-radius: 9px; padding: 13px 14px; font: inherit; font-size: 12px; line-height: 1.9; color: inherit; background: white; }
+.create-field > input { min-height: 46px; }
+.create-field > textarea { resize: vertical; min-height: 110px; }
+.create-field > input::placeholder, .create-field > textarea::placeholder { color: #8a8796; }
+.compose-actions { border-top: 1px solid var(--line); margin-top: 28px; padding-top: 24px; display: grid; gap: 10px; }
+.compose-actions .field-help { margin-top: 0; text-align: center; }
+.create-page button:disabled { cursor: not-allowed; opacity: .55; }
+.save-state { color: #926127; background: #fff5e7; font-size: 10px; padding: 6px 9px; border-radius: 6px; line-height: 1.6; }
+.save-state.is-saved { color: #35734b; background: #edf6ef; }
+.platform-tabs { display: flex; flex-wrap: wrap; gap: 5px; border-bottom: 1px solid var(--line); margin-top: 24px; }
+.platform-tabs button { flex: 1 1 auto; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--muted); padding: 10px 8px; font-size: 11px; }
+.platform-tabs button[aria-selected="true"] { color: var(--purple); border-color: var(--purple); font-weight: 650; }
+.editor-field textarea { min-height: 180px; }
+.editor-meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 9px; line-height: 1.8; color: var(--muted); margin-top: 8px; }
+.preview-heading { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin: 26px 0 12px; }
+.preview-heading h3 { font-size: 11px; font-weight: 600; }
+.preview-heading > span { font-size: 9px; color: var(--muted); }
+.social-preview { border: 1px solid #e2e1e8; border-radius: 12px; overflow: hidden; padding: 18px; background: #fff; }
+.preview-account { display: flex; align-items: center; gap: 10px; }
+.preview-avatar { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--brand-accent); color: white; font-size: 14px; flex-shrink: 0; }
+.preview-account strong { font-size: 11px; }
+.preview-account small { display: block; font-size: 9px; color: var(--muted); margin-top: 4px; }
+.preview-more { margin-left: auto; color: var(--muted); font-size: 13px; }
+.preview-body, .preview-empty { margin-top: 18px; font-size: 12px; line-height: 1.9; white-space: pre-wrap; overflow-wrap: anywhere; }
+.preview-empty { color: #8a8796; padding: 14px 0; }
+.preview-decoration { border-top: 1px solid var(--line); margin-top: 18px; padding-top: 12px; color: #74717e; font-size: 12px; }
+.preview-facebook { background: #fafbff; }
+.preview-threads .preview-body { border-left: 2px solid var(--line); padding-left: 16px; margin-left: 16px; }
+.preview-x { border-radius: 4px; }
+.preview-note { font-size: 9px; }
+.draft-save { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--line); }
+.save-button { width: 100%; }
+.storage-note { font-size: 9px; }
+.create-error { background: #fff3f2; border: 1px solid #edc7c4; color: #922e29; border-radius: 9px; padding: 14px; margin-bottom: 16px; font-size: 11px; line-height: 1.9; overflow-wrap: anywhere; }
+.create-error p { margin-top: 6px; }
+.create-error ul { margin: 8px 0 0; padding-left: 18px; }
+.create-error button { margin-top: 10px; }
+.create-empty { padding: 40px 8px; text-align: center; color: var(--muted); }
+.create-empty > span { font-size: 30px; color: #a88cde; }
+.create-empty h3 { font-size: 13px; margin-top: 14px; }
+.create-empty p { font-size: 11px; line-height: 1.9; margin-top: 10px; }
+@media (max-width: 1100px) and (min-width: 901px) { .create-grid { gap: 16px; } .platform-options { grid-template-columns: 1fr; } }
+@media (max-width: 700px) { .create-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; } .create-notice { padding: 13px; align-items: flex-start; } .create-page .panel { padding: 20px; } .platform-options { gap: 8px; } .platform-option { gap: 6px; padding: 10px 8px; font-size: 10px; } .platform-icon { width: 21px; height: 21px; font-size: 15px; } .social-preview { padding: 14px; } }

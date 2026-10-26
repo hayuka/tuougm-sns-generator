@@ -28,6 +28,6 @@ export function Overview() {
         </section>
       </div>
     </>}
-    <section className="panel quick-actions" aria-labelledby="quick-title"><div><p className="eyebrow">NEXT STEP</p><h2 id="quick-title">クイックアクション</h2><p className="section-note">各機能は準備中です。リンク先で実装状況を確認できます。</p></div><div className="action-links"><Link className="button primary" to="/create">＋ 投稿を作成 <small>準備中</small></Link><Link className="button secondary" to="/content">コンテンツを追加 <small>準備中</small></Link></div></section>
+    <section className="panel quick-actions" aria-labelledby="quick-title"><div><p className="eyebrow">NEXT STEP</p><h2 id="quick-title">クイックアクション</h2><p className="section-note">投稿文を手動で作成し、下書きに保存できます。</p></div><div className="action-links"><Link className="button primary" to="/create">＋ 投稿を作成</Link><Link className="button secondary" to="/content">コンテンツを追加 <small>準備中</small></Link></div></section>
   </div>;
 }

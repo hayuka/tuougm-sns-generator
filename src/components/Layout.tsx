@@ -52,7 +52,7 @@ export function Layout() {
         <div className="header-brand"><span className="brand-avatar" aria-hidden="true">{brand.name.slice(0, 1)}</span><span>{brand.name}<small>選択中のブランド</small></span></div>
       </header>
       <main id="main" tabIndex={-1}><Outlet /></main>
-      <footer className="workspace-footer">SNS GENERATOR <span>Phase 1 — UI Preview</span></footer>
+      <footer className="workspace-footer">SNS GENERATOR <span>Phase 2 — Draft Workspace</span></footer>
     </div>
   </div>;
 }
