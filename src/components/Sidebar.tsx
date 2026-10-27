@@ -20,7 +20,7 @@ export function Sidebar({ close }: { close: () => void }) {
     <nav aria-label="メインナビゲーション">
       {navigation.map((item) => <NavLink to={item.path} key={item.path} onClick={close} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
         <span className="nav-symbol" aria-hidden="true">{item.symbol}</span><span>{item.title}<small>{item.label}</small></span>
-        {item.path !== '/overview' && item.path !== '/create' && <span className="nav-soon">準備中</span>}
+        {item.path !== '/overview' && item.path !== '/create' && item.path !== '/content' && <span className="nav-soon">準備中</span>}
       </NavLink>)}
     </nav>
     <div className="sidebar-footer"><span className="mode-dot" /> MANUAL モード<p>Overview はサンプルデータ</p></div>

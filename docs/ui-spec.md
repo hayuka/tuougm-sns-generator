@@ -21,12 +21,20 @@ Future (not MVP): Analytics, Automation, Integrations.
 - Primary CTA: Create post.
 - Empty state guides first-time setup.
 
-## Screen B — Content
-- Search and filter by type, source, date, status.
-- Content cards/list with title, source URL, language, tags, rights notes, last updated.
-- Add idea or link manually; attach existing asset reference.
-- CTA: Create post from selected item.
-- WordPress import shown only after implementation is approved; do not render an inert connection button.
+## Screen B — Content (Phase 3)
+Content manages saved posts. The earlier source-library proposal is deferred.
+- Reuse global brand context; do not duplicate brand selection or put brand IDs in the URL.
+- Show one row/card per DraftPost: theme, selected SNS names/icons, two-line body excerpt, updated time, draft status, visible edit action.
+- Filter by selected SNS; show that SNS body when filtered. Sort by updated time descending.
+- Desktop list and mobile cards from 320px; wrap long titles/URLs and retain keyboard focus indicators.
+- `/create` starts/resumes a new scratch; `/create?draft=<postId>` opens an existing post only in the current brand.
+- Delete lives under Other, requires confirmation with brand/theme, and keeps the item on failure.
+- Distinguish empty library, no filter matches, read failure, delete failure, and unsaved work.
+- New creation and update are separate. Theme alone is required; SNS selection and body are optional.
+- Save stays in Create with success/time feedback; provide a separate Content link.
+- Persist multiple drafts in brand-scoped localStorage v2; preserve v1 data during migration.
+- Compare revisions before writes; localStorage does not guarantee atomic concurrent updates.
+- Source ingestion, approvals, scheduling and publication are not part of this phase.
 
 ## Screen C — Create (primary workspace)
 Desktop: three functional areas in a single page:
