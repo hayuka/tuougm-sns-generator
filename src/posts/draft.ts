@@ -8,6 +8,7 @@ export const platforms = [
 export type PlatformId = typeof platforms[number]['id'];
 export interface DraftPost {
   id: string;
+  revision: number;
   brandId: string;
   status: 'draft';
   createdAt: string;
@@ -21,7 +22,7 @@ export interface DraftPost {
 export function createDraft(brandId: string): DraftPost {
   const now = new Date().toISOString();
   return {
-    id: crypto.randomUUID(), brandId, status: 'draft', createdAt: now, updatedAt: now,
+    id: crypto.randomUUID(), revision: 0, brandId, status: 'draft', createdAt: now, updatedAt: now,
     theme: '', instructions: '', platforms: ['instagram'],
     bodies: { instagram: '', threads: '', facebook: '', x: '' },
   };
@@ -30,11 +31,5 @@ export function createDraft(brandId: string): DraftPost {
 export function validateDraft(draft: DraftPost): string[] {
   const errors: string[] = [];
   if (!draft.theme.trim()) errors.push('投稿テーマを入力してください。');
-  if (!draft.platforms.length) errors.push('投稿先SNSを1つ以上選択してください。');
-  for (const platform of platforms) {
-    if (draft.platforms.includes(platform.id) && !draft.bodies[platform.id].trim()) {
-      errors.push(`${platform.name}の投稿文を入力してください。`);
-    }
-  }
   return errors;
 }
